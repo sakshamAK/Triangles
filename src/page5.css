@@ -1,20 +1,165 @@
 .hypotenous form h2 {
-    grid-column-start: 2;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  text-align: center;
 }
 
-.hypotenous .feed-angles:nth-of-type(1){
-    grid-column-start: 2;
-    grid-row-start: 4;
+.hypotenous .feed-angles:nth-of-type(1) {
+  grid-column-start: 2;
+  grid-row-start: 4;
 }
 
-.hypotenous .feed-angles:nth-of-type(2){
-    grid-column-start: 4;
-    grid-row-start: 4;
+.hypotenous .feed-angles:nth-of-type(2) {
+  grid-column-start: 4;
+  grid-row-start: 4;
 }
 
 .hypotenous form button {
+  grid-column-start: 3;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1359px) {
+  #triangleImg {
     grid-column-start: 3;
+    height: 310px;
+    margin: 10px;
+  }
+  #takeInput {
+    grid-column-start: 3;
+    grid-column-end: 6;
+    margin: 0;
+  }
+  .fourthPage h2 {
+    text-align: center;
+  }
+  .hypotenous form h2 {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1295px) {
+  #triangleImg {
+    height: 295px;
+  }
+  h2:nth-of-type(2) {
+    margin: 30px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  #triangleImg {
+    height: 280px;
+  }
+}
+
+@media screen and (max-width: 1165px) {
+  #triangleImg {
+    height: 265px;
+  }
+  h2:nth-of-type(2) {
+    margin: 50px 0 0 0;
+  }
+  #triangle-lg {
+    top: 180px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+  .feed-angles,
+  button:nth-of-type(1),
+  button:nth-of-type(2) {
+    padding: 15px;
+  }
+  .thirdPage {
+    grid-template-columns: 30% 5% 12% 5% 11% 5% 32%;
+  }
+  .thirdPage p:nth-of-type(2) {
+    grid-column-start: 6;
+    grid-column-end: 8;
+  }
+
+  .hypotenous form button {
+    font-size: 18px;
+    width: 170px;
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  h2 {
+    font-size: 40px;
+  }
+  .secondPage p,
+  .thirdPage p:nth-of-type(1),
+  .thirdPage p:nth-of-type(2) {
+    font-size: 25px;
+  }
+  .hypotenous form {
+    grid-template-columns: 13% 25% 25% 25% 10%;
+  }
+  .feed-angles {
+    font-size: 18px;
+  }
+  .thirdPage {
+    grid-template-columns: 30% 5% 13% 5% 13% 5% 29%;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  h1 {
+    font-size: 50px;
+  }
+  .thirdPage {
+    grid-template-columns: 30% 5% 13% 5% 13% 8% 26%;
+  }
+  .thirdPage p:nth-of-type(2) {
+    margin: 0 0 0px -90px;
+  }
+  .thirdPage p:nth-of-type(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding: 0px 5px 50px 20px;
+  }
+  .fourthPage form {
+    grid-template-columns: 5% 10% 23% 23% 23% 10% 5%;
+  }
+  .fourthPage .feed-angles:nth-of-type(1) {
+    grid-column-start: 3;
+  }
+  .fourthPage .feed-angles:nth-of-type(2) {
+    grid-column-start: 5;
+  }
+  .fourthPage .feed-angles:nth-of-type(3) {
+    grid-column-start: 4;
+  }
+  .fourthPage h2 {
+    grid-column-end: 7;
+  }
+  .fourthPage p {
+    grid-column: 3/6;
+  }
+  .triangle-sm:nth-of-type(2) {
+    left: 340px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .thirdPage {
+    grid-template-columns: 26% 5% 15% 5% 13% 10% 26%;
+  }
+  .thirdPage p:nth-of-type(2) {
+    margin: -46px 0 0px -90px;
+  }
+  .hypotenous form {
+    grid-template-columns: 8% 28% 28% 28% 8%;
+  }
 }

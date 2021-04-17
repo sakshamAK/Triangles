@@ -1,4 +1,5 @@
 import { useState } from 'react';
+// import Triangle from './triangle.svg'
 
 const ThreeTriangles = () => {
     let [a, setA] = useState(Math.floor(Math.random() * 100));
@@ -63,9 +64,7 @@ const ThreeTriangles = () => {
         <div className="thirdPage">
             <p>{instruction}</p>
             <p>{instruction2}</p>
-            <svg width="523" height="386" xmlns="http://www.w3.org/2000/svg">
-                <path d="m97.17866,346.24379l172,-300.99999l172,300.99999l-344,0z" stroke="#fff" strokeWidth="5" />
-            </svg>
+            <img src = "triangle.svg" id = "triangleImg" alt = "triangle" />
             <button onClick={random}>Get Angles</button>
             <button onClick={findThird}>Find The Third</button>
             <h2 className={toggleDisplay ? 'show' : 'hide'}>{a}°</h2>

@@ -4,7 +4,7 @@ import { useState } from 'react'
 const Hypotenous = () => {
     const [side1, setSide1] = useState('')
     const [side2, setSide2] = useState('')
-    const [output, setOutput] = useState('')
+    const [output, setOutput] = useState('Hypotenous is :')
     const [text1, setText1] = useState('Enter the two sides of right triangle, press enter and find out the hypotenous.')
     const [text2, setText2] = useState('Get The Area')
     const [toggle, setToggle] = useState(true)
