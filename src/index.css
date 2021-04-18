@@ -1,57 +1,59 @@
 body {
   margin: 0;
-  font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+  font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #000000;
-  margin:0;
-  color:#fcfcfc;
+  margin: 0;
+  color: #fcfcfc;
 }
 
 .firstPage {
-  overflow:hidden;
-  height:720px;
+  overflow: hidden;
+  height: 720px;
 }
 
-.secondPage, .thirdPage, .hypotenous {
-  width:100%;
-  height:757px;
+.secondPage,
+.thirdPage,
+.hypotenous {
+  width: 100%;
+  height: 757px;
 }
 
 header ul {
   list-style-type: none;
-  text-align:right;
+  text-align: right;
   padding: 0 30px;
-  margin:15px 10px 0 10px;
+  margin: 15px 10px 0 10px;
 }
 
 header ul div {
   width: 200px;
-  font-size:20px;
-  font-weight:bold;
+  font-size: 20px;
+  font-weight: bold;
   text-align: left;
-  float:left;
+  float: left;
   margin-top: 0;
   /* color:white; */
 }
 
 header ul div a {
-  color:white;
-  font-weight : 700;
+  color: white;
+  font-weight: 700;
 }
 
 header ul li {
-  padding:20px;
-  display:inline;
-  cursor:pointer;
+  padding: 20px;
+  display: inline;
+  cursor: pointer;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: justify;
   padding: 20px 20px;
 }
@@ -63,95 +65,98 @@ h1 {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-#triangle-lg, .triangle-sm, .triangle-md, #triangle-ex-sm {
+#triangle-lg,
+.triangle-sm,
+.triangle-md,
+#triangle-ex-sm {
   animation: rotation 40s linear infinite;
-  margin:-100px 30px 0 30px;
-  position:relative;
+  margin: -100px 30px 0 30px;
+  position: relative;
 }
 
 .star {
   position: fixed;
-  filter:blur(3px);
+  filter: blur(3px);
 }
 
 #triangle-lg {
-  top:100px;
+  top: 100px;
   /* filter:blur(2px); */
 }
 
-.triangle-sm:nth-of-type(1){
-  position:relative;
+.triangle-sm:nth-of-type(1) {
+  position: relative;
   left: 0px;
-  top:200px;
-  filter:blur(7px);
+  top: 200px;
+  filter: blur(7px);
 }
 
-.triangle-sm:nth-of-type(2){
-  left:150px;
+.triangle-sm:nth-of-type(2) {
+  left: 150px;
   transform: rotate(53deg);
-  animation : ghumo 40s linear infinite;
-  filter:blur(3px);
+  animation: ghumo 40s linear infinite;
+  filter: blur(3px);
 }
 
-.triangle-md:nth-of-type(3){
-  left:400px;
-  top:250px;
-  filter:blur(3px);
+.triangle-md:nth-of-type(3) {
+  left: 400px;
+  top: 250px;
+  filter: blur(3px);
 }
 
-.triangle-sm:nth-of-type(4){
-  left:600px;
-  top:0;
-  filter:blur(5px);
+.triangle-sm:nth-of-type(4) {
+  left: 600px;
+  top: 0;
+  filter: blur(5px);
 }
 
-#triangle-ex-sm:nth-of-type(5){
-  left:700px;
-  top:200px;
-  filter:blur(10px);
+#triangle-ex-sm:nth-of-type(5) {
+  left: 700px;
+  top: 200px;
+  filter: blur(10px);
 }
 
-.star:nth-of-type(7){
-  left:200px;
-  top:100px;
+.star:nth-of-type(7) {
+  left: 200px;
+  top: 100px;
 }
 
-.star:nth-of-type(8){
-  left:500px;
-  top:160px;
+.star:nth-of-type(8) {
+  left: 500px;
+  top: 160px;
 }
 
-.star:nth-of-type(9){
-  left:50px;
+.star:nth-of-type(9) {
+  left: 50px;
 }
 
-.star:nth-of-type(10){
-  left:1450px;
-  top:400px;
+.star:nth-of-type(10) {
+  left: 1450px;
+  top: 400px;
 }
 
-.star:nth-of-type(11){
-  left:1000px;
-  top:300px;
+.star:nth-of-type(11) {
+  left: 1000px;
+  top: 300px;
 }
 
-.star:nth-of-type(6){
-  left:1100px;
-  top:700px;
+.star:nth-of-type(6) {
+  left: 1100px;
+  top: 700px;
 }
 
-.star:nth-of-type(12){
-  left:400px;
-  top:650px;
+.star:nth-of-type(12) {
+  left: 400px;
+  top: 650px;
 }
 
 @keyframes rotation {
   from {
-    transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);

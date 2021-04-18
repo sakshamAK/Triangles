@@ -8,9 +8,6 @@ const Form = ({ submit, first, second, third, output, display, placeholder, disp
             <h2 style={{
                 display: display3
             }}>{text1}</h2>
-            <input type="number" placeholder={"First " + placeholder} className="feed-angles" onChange={first} />
-            <input type="number" placeholder={"Second " + placeholder} className="feed-angles" onChange={second} />
-            <input type="number" placeholder={"Third " + placeholder} className="feed-angles" onChange={third} style={{ display: display4 }} />
             <p style={{
                 display: display2,
                 whiteSpace: "pre-wrap"
@@ -18,6 +15,9 @@ const Form = ({ submit, first, second, third, output, display, placeholder, disp
             <p style={{
                 whiteSpace: "pre-wrap"
             }}> {output}</p>
+            <input type="number" placeholder={"First " + placeholder} className="feed-angles" onChange={first} />
+            <input type="number" placeholder={"Second " + placeholder} className="feed-angles" onChange={second} />
+            <input type="number" placeholder={"Third " + placeholder} className="feed-angles" onChange={third} style={{ display: display4 }} />
             <input type="submit" className="feed-angles" value="Submit" style={{ display: display }} />
             <button onClick={areaOfTriangle} style={{
                 display: display5

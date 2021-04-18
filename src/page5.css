@@ -122,12 +122,18 @@
     grid-template-columns: 30% 5% 13% 5% 13% 8% 26%;
   }
   .thirdPage p:nth-of-type(2) {
-    margin: 0 0 0px -90px;
+    margin: -30px 0 0px -90px;
+    font-size: larger;
+    grid-column: 7/8;
   }
   .thirdPage p:nth-of-type(1) {
     grid-column-start: 1;
     grid-column-end: 4;
     padding: 0px 5px 50px 20px;
+    font-size: larger;
+  }
+  .thirdPage h2 {
+    font-size: 40px;
   }
   .fourthPage form {
     grid-template-columns: 5% 10% 23% 23% 23% 10% 5%;
@@ -150,6 +156,10 @@
   .triangle-sm:nth-of-type(2) {
     left: 340px;
   }
+  form h2,
+  .hypotenous form h2 {
+    font-size: 35px;
+  }
 }
 
 @media screen and (max-width: 875px) {
@@ -161,5 +171,158 @@
   }
   .hypotenous form {
     grid-template-columns: 8% 28% 28% 28% 8%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  header ul div {
+    font-size: 18px;
+  }
+  header ul li a img {
+    height: 20px;
+  }
+  header ul {
+    padding: 0;
+  }
+  header ul li {
+    padding: 10px;
+  }
+  .triangle-sm:nth-of-type(2) {
+    left: 0px;
+    top: -200px;
+  }
+  .firstPage {
+    height: 720px;
+  }
+  .firstPage .container {
+    padding: 0;
+    margin: 20px 0 0 0;
+  }
+  .firstPage .container h1 {
+    padding-left: 20px;
+  }
+  .secondPage,
+  .thirdPage,
+  .fourthPage,
+  .fourthPage form,
+  .hypotenous,
+  .hypotenous form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fourthPage .secondPage p::before,
+  .hypotenous .secondPage p::before {
+    content: none;
+  }
+
+  .fourthPage form h2,
+  .fourthPage form p {
+    padding: 0 20px;
+  }
+
+  .fourthPage form p {
+    margin: 0;
+  }
+
+  .fourthPage form h2,
+  .hypotenous form h2 {
+    font-weight: normal;
+    font-size: 25px;
+    margin: 0 0 30px 0;
+  }
+
+  .secondPage p {
+    margin: 0 0 60px 0;
+  }
+  .secondPage .feed-angles {
+    margin: 25px 0;
+  }
+  .secondPage p::before,
+  .thirdPage p:nth-of-type(1)::before,
+  .fourthPage form h2::before,
+  .hypotenous form h2::before {
+    content: " ";
+    display: block;
+    margin: 100px auto;
+    height: 1px;
+    width: 90%;
+    background-color: white;
+  }
+
+  .fourthPage form h2::before {
+    margin: 150px auto 100px auto;
+  }
+
+  .thirdPage p:nth-of-type(1),
+  .thirdPage p:nth-of-type(2) {
+    font-size: 25px;
+    padding: 0 20px;
+    text-align: center;
+    margin: 0 0 30px 0;
+  }
+  .thirdPage p:nth-of-type(2) {
+    margin: 30px 0 50px 0;
+  }
+  .thirdPage button {
+    margin: 40px 0 0 0;
+  }
+  #triangleImg {
+    display: none;
+  }
+  .thirdPage h2 {
+    padding: 0;
+    margin: 5px 0;
+    font-size: 30px;
+  }
+  .thirdPage input {
+    margin: 20px 0;
+  }
+  .thirdPage #answer {
+    margin: 30px 0 0 0;
+  }
+
+  .hypotenous .secondPage p {
+    margin: 30px 0 50px;
+  }
+
+  .hypotenous .secondPage .feed-angles:nth-of-type(2) {
+    margin: 25px 0 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #triangle-lg {
+    top: 120px;
+  }
+}
+@media screen and (max-height: 566px) {
+  .firstPage {
+    height: 540px;
+  }
+  #triangle-lg {
+    top: 130px;
+    height: 220px;
+  }
+  .firstPage .container h1 {
+    font-size: 40px;
+  }
+  .secondPage p::before,
+  .thirdPage p:nth-of-type(1)::before,
+  .fourthPage form h2::before,
+  .hypotenous form h2::before {
+    margin: -100px auto 100px;
+  }
+
+  .secondPage p::before {
+    margin: 0 auto 100px;
+    background: none;
+  }
+
+  .fourthPage form h2::before {
+    margin: 0 auto 100px;
+  }
+  .hypotenous {
+    height: 600px;
   }
 }

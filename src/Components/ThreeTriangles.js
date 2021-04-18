@@ -9,8 +9,7 @@ const ThreeTriangles = () => {
     const [toggleDisplay, setToggleDisplay] = useState(true);
     const [instruction, setInstruction] = useState('Three angles of a triangle are given.');
     const [instruction2, setInstruction2] = useState('Tell whether they form an acute, obtuse, or right triangle.');
-
-    const random = () => {
+    const randAngles = () => {
         let angle1 = Math.floor(Math.random() * 100);
         setA(angle1);
         a = angle1;
@@ -19,6 +18,9 @@ const ThreeTriangles = () => {
         b = angle2;
         let angle3 = 180 - a - b;
         setC(angle3);
+    }
+    const random = () => {
+        randAngles();
         setToggleDisplay(true);
         setInstruction('Three angles of a triangle are given.');
         setInstruction2('Tell whether they form an acute, obtuse, or right triangle.');
@@ -57,21 +59,22 @@ const ThreeTriangles = () => {
         } else {
             setAnswer("Oops! Try Again");
         }
+        randAngles();
         setInstruction("Enter the third angle to form a triangle");
         setInstruction2("");
     }
     return (
         <div className="thirdPage">
             <p>{instruction}</p>
-            <p>{instruction2}</p>
-            <img src = "triangle.svg" id = "triangleImg" alt = "triangle" />
-            <button onClick={random}>Get Angles</button>
-            <button onClick={findThird}>Find The Third</button>
+            <img src="triangle.svg" id="triangleImg" alt="triangle" />
             <h2 className={toggleDisplay ? 'show' : 'hide'}>{a}°</h2>
             <input className={toggleDisplay ? 'hide' : 'show'} type="number" placeholder="Angle" onChange={(e) => findThird(e.target.value)} />
             <h2>{b}°</h2>
             <h2>{c}°</h2>
+            <p>{instruction2}</p>
             <input type="text" id="takeInput" placeholder="Your answer" onChange={(e) => ans(e.target.value)} disabled={!toggleDisplay} />
+            <button onClick={random}>Get Angles</button>
+            <button onClick={findThird}>Find The Third</button>
             <p id="answer">{answer}</p>
         </div>
     )
