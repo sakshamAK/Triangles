@@ -326,3 +326,7 @@
     height: 600px;
   }
 }
+
+button {
+  cursor: pointer;
+}
