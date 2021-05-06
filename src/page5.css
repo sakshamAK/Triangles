@@ -330,3 +330,75 @@
 button {
   cursor: pointer;
 }
+
+@media screen and (min-height: 900px) {
+  .firstPage,
+  .secondPage,
+  .thirdPage,
+  .fourthPage {
+    height: 860px;
+  }
+  .thirdPage {
+    grid-template-columns: 30% 5% 12% 5% 11% 5% 32%;
+  }
+  #triangle-ex-sm:nth-of-type(5) {
+    top: 380px;
+    left: 620px;
+  }
+  .triangle-md:nth-of-type(3) {
+    top: 300px;
+  }
+  .triangle-sm:nth-of-type(1) {
+    top: 370px;
+  }
+}
+
+@media screen and (min-height: 990px) {
+  .firstPage .container {
+    height: 900px;
+  }
+  .firstPage,
+  .secondPage,
+  .thirdPage,
+  .fourthPage {
+    height: 950px;
+  }
+  #triangle-lg {
+    top: 140px;
+    height: 490px;
+    width: 460px;
+  }
+  .triangle-sm:nth-of-type(1) {
+    left: 170px;
+    top: -600px;
+  }
+
+  .triangle-sm:nth-of-type(2) {
+    top: -20px;
+    height: 205px;
+    left: 60px;
+    width: 260px;
+  }
+  .triangle-md:nth-of-type(3) {
+    left: 320px;
+    top: -500px;
+  }
+  #triangle-ex-sm:nth-of-type(5) {
+    left: 410px;
+    top: -850px;
+  }
+  .triangle-sm:nth-of-type(4) {
+    left: 400px;
+    top: -10px;
+    height: 190px;
+    width: 128px;
+  }
+
+  .fourthPage h2 {
+    grid-column: 1/6;
+  }
+
+  .thirdPage {
+    grid-template-columns: 30% 5% 12% 5% 10% 5% 33%;
+  }
+}
