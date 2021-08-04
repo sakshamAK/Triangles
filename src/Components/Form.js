@@ -4,7 +4,7 @@ const Form = ({ submit, first, second, third, output, display, placeholder, disp
         <form className="secondPage" onSubmit={submit} >
             <h2 style={{
                 display: display2
-            }}>Enter the sides of {sides}</h2>
+            }}>Enter the sides of {sides}.</h2>
             <h2 style={{
                 display: display3
             }}>{text1}</h2>

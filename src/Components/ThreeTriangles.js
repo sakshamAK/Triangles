@@ -56,10 +56,10 @@ const ThreeTriangles = () => {
         setToggleDisplay(false);
         if (b + c + parseInt(e) === 180) {
             setAnswer("You're Correct!");
+            randAngles();
         } else {
             setAnswer("Oops! Try Again");
         }
-        randAngles();
         setInstruction("Enter the third angle to form a triangle");
         setInstruction2("");
     }
