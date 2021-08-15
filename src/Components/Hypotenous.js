@@ -35,7 +35,6 @@ const Hypotenous = () => {
     return (
         <div className="hypotenous">
             <Form display2="none" display="none" placeholder="side" text1={text1} output={output} display4="none" first={(e) => setSide1(e.target.value)} second={(e) => setSide2(e.target.value)} submit={(e) => { e.preventDefault(); toggle ? getHypo() : getArea() }} display5="block" areaOfTriangle={areaOfTriangle} labelText={text2} />
-
         </div>
     )
 }
