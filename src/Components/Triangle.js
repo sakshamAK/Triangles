@@ -6,18 +6,22 @@ const Triangle = () => {
     const [a1, setA1] = useState('');
     const [a2, setA2] = useState('');
     const [a3, setA3] = useState('');
-    const [output, setOutput] = useState('Enter the three angles of triangle and lets see if you can create a triangle');
+    const [output, setOutput] = useState('Enter the three angles of triangle to create a triangle.\nPress enter key after filling, to submit the values');
     const submitAngle = (e) => {
         e.preventDefault();
-        if (a1 === '' || a2 === '' || a3 === '') {
-            alert("Enter the value first");
+        if(a1 > 0 && a2 > 0 && a3 > 0){
+            if (a1 === '' || a2 === '' || a3 === '') {
+                alert("Enter the value first");
+            }
+            let sum = parseInt(a1) + parseInt(a2) + parseInt(a3);
+            if (sum === 180) {
+                setOutput("Congrats! you formed a triangle");
+            } else {
+                setOutput("Triangle cannot be formed with these angles. \n HINT : Sum of angles of trianges is 180 degrees.");
+            }
         }
-        let sum = parseInt(a1) + parseInt(a2) + parseInt(a3);
-        if (sum === 180) {
-            setOutput("Congrats! you formed a triangle");
-        } else {
-            setOutput("Triangle cannot be formed with these angles. \n HINT : Sum of angles of trianges is 180 degrees.");
-        }
+        else
+            setOutput("Enter positive values only")
     }
 
     return (

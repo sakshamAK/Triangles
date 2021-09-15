@@ -5,7 +5,7 @@ const ThreeTriangles = () => {
     let [a, setA] = useState(Math.floor(Math.random() * 100));
     let [b, setB] = useState(100 - a);
     let [c, setC] = useState(180 - a - b);
-    const [answer, setAnswer] = useState('');
+    const [answer, setAnswer] = useState('Type and get the results ;)');
     const [toggleDisplay, setToggleDisplay] = useState(true);
     const [instruction, setInstruction] = useState('Three angles of a triangle are given.');
     const [instruction2, setInstruction2] = useState('Tell whether they form an acute, obtuse, or right triangle.');
@@ -54,14 +54,18 @@ const ThreeTriangles = () => {
 
     const findThird = (e) => {
         setToggleDisplay(false);
-        if (b + c + parseInt(e) === 180) {
-            setAnswer("You're Correct!");
-            randAngles();
-        } else {
-            setAnswer("Oops! Try Again");
+        if(parseInt(e) >= 0 && b >= 0 && c >= 0){
+            if (b + c + parseInt(e) === 180) {
+                setAnswer("You're Correct!");
+                randAngles();
+            } else {
+                setAnswer("Oops! Try Again");
+            }
+            setInstruction("Enter the third angle to form a triangle");
+            setInstruction2("");
         }
-        setInstruction("Enter the third angle to form a triangle");
-        setInstruction2("");
+        else
+            setAnswer("Enter positive values only")
     }
     return (
         <div className="thirdPage">
