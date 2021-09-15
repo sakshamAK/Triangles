@@ -54,6 +54,8 @@ const ThreeTriangles = () => {
 
     const findThird = (e) => {
         setToggleDisplay(false);
+        setInstruction("Enter the third angle to form a triangle");
+        setInstruction2("");
         if(parseInt(e) >= 0 && b >= 0 && c >= 0){
             if (b + c + parseInt(e) === 180) {
                 setAnswer("You're Correct!");
@@ -61,8 +63,6 @@ const ThreeTriangles = () => {
             } else {
                 setAnswer("Oops! Try Again");
             }
-            setInstruction("Enter the third angle to form a triangle");
-            setInstruction2("");
         }
         else
             setAnswer("Enter positive values only")
