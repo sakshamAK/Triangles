@@ -25,34 +25,20 @@ const ThreeTriangles = () => {
         setInstruction('Three angles of a triangle are given.');
         setInstruction2('Tell whether they form an acute, obtuse, or right triangle.');
     }
-    const ans = (e) => {
+    const ans = e => {
         if (a > 90 || b > 90 || c > 90) {
-            if (e.toLowerCase() === "obtuse") {
-                setAnswer("you're correct! Answer is obtuse triangle");
-            } else {
-                setAnswer("Oops! Try Again.");
-            }
+            (e.toLowerCase() === "obtuse") ? setAnswer("you're correct! Answer is obtuse triangle") : setAnswer("Oops! Try Again.");
         }
         else if (a < 90 || b < 90 || c < 90) {
-            if (e.toLowerCase() === "acute") {
-                setAnswer("you're correct! Answer is acute triangle");
-            } else {
-                setAnswer("Oops! Try Again.");
-            }
+            (e.toLowerCase() === "acute") ? setAnswer("you're correct! Answer is acute triangle") : setAnswer("Oops! Try Again.");
         }
         else if (a === 90 || b === 90 || c === 90) {
-            if (e.toLowerCase() === "right") {
-                setAnswer("you're correct! Answer is right triangle");
-            } else {
-                setAnswer("Oops! Try Again.");
-            }
+            (e.toLowerCase() === "right") ? setAnswer("you're correct! Answer is right triangle") : setAnswer("Oops! Try Again.");
         }
-        else {
-            setAnswer("Oops! Try Again.");
-        }
+        else setAnswer("Oops! Try Again.");
     }
 
-    const findThird = (e) => {
+    const findThird = e => {
         setToggleDisplay(false);
         setInstruction("Enter the third angle to form a triangle");
         setInstruction2("");
@@ -60,12 +46,9 @@ const ThreeTriangles = () => {
             if (b + c + parseInt(e) === 180) {
                 setAnswer("You're Correct!");
                 randAngles();
-            } else {
-                setAnswer("Oops! Try Again");
-            }
+            } else setAnswer("Oops! Try Again");
         }
-        else
-            setAnswer("Enter positive values only")
+        else setAnswer("Enter positive values only")
     }
     return (
         <div className="thirdPage">

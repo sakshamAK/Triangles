@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 const Quiz = () => {
     const [score, setScore] = useState(0);
     const correctAns = ["o1", "o2", "o1", "o1", "o1", "o2", "o2", "o3", "o3", "o3" ];
-    const onsubmit = (e) => {
+    const onsubmit = e => {
         e.preventDefault();
         setScore(0)
         let formData = document.forms[3];

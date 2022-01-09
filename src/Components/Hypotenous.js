@@ -10,19 +10,8 @@ const Hypotenous = () => {
     const [toggle, setToggle] = useState(true)
     let s1 = parseInt(side1);
     let s2 = parseInt(side2);
-    const getHypo = () => {
-        if(s1 > 0 && s2 > 0)
-            setOutput("Hypotenous is : " + parseInt(Math.sqrt((s1 * s1) + (s2 * s2))));
-        else
-            setOutput("Enter positive values only")
-    }
-    const getArea = () => {
-        if(s1 > 0 && s2 > 0)
-            setOutput("Area is : " + (0.5*s1*s2))
-        else
-            setOutput("Enter positive values only")
-    }
-
+    const getHypo = () => (s1 > 0 && s2 > 0) ? setOutput("Hypotenous is : " + parseInt(Math.sqrt((s1 * s1) + (s2 * s2)))) : setOutput("Enter positive values only");
+    const getArea = () => (s1 > 0 && s2 > 0) ? setOutput("Area is : " + (0.5*s1*s2)) : setOutput("Enter positive values only");
     const toggleTrue = () => {
         setToggle(false);
         setText1('Enter the base and height of triangle, Press enter to get the area.');
@@ -36,7 +25,7 @@ const Hypotenous = () => {
         setOutput("Hypotenous is : ");
     }
 
-    const areaOfTriangle = (e) => {
+    const areaOfTriangle = e => {
         e.preventDefault();
         toggle ? toggleTrue() : toggleFalse()
     }

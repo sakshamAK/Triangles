@@ -9,7 +9,7 @@ const SidesBased = () => {
     const [s2, setS2] = useState('');
     const [s3, setS3] = useState('');
 
-    const onsubmit = (e) => {
+    const onsubmit = e => {
         e.preventDefault();
         let Side1 = parseInt(s1);
         let Side2 = parseInt(s2);
